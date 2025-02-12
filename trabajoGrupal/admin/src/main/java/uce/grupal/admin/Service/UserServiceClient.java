@@ -4,6 +4,7 @@ import java.util.List;
 
 import uce.gruapal.shared.model.User;
 import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 

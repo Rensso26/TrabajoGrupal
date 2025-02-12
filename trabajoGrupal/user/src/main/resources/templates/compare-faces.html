@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Comparar Rostros</title>
+</head>
+<body>
+    <h1>Comparar Rostros</h1>
+    <form action="/compare-faces" method="post" enctype="multipart/form-data">
+        <label>Foto 1:</label>
+        <input type="file" name="image1" required>
+        <br>
+        <label>Foto 2:</label>
+        <input type="file" name="image2" required>
+        <br>
+        <button type="submit">Comparar</button>
+    </form>
+
+    <h2>Resultado:</h2>
+    <p th:text="${result}">Resultado aquí...</p>
+</body>
+</html>

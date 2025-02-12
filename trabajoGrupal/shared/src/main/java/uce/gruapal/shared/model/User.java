@@ -1,12 +1,18 @@
 package uce.gruapal.shared.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+@Entity
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String facialData;
 
-    // Getters y Setters
     public Long getId() {
         return id;
     }

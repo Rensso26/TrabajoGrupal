@@ -1,2 +1,2 @@
-uce\gruapal\Main.class
 uce\gruapal\shared\model\User.class
+uce\gruapal\shared\repository\UserRepository.class

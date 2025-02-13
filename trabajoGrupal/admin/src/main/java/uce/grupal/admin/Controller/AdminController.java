@@ -4,10 +4,6 @@ import java.io.IOException;
 import java.util.Base64;
 import java.util.List;
 
-import uce.gruapal.shared.repository.UserRepository;
-import uce.grupal.admin.model.UserImage;
-import uce.grupal.admin.repository.UserImageRepository;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,12 +18,16 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import uce.gruapal.shared.model.User;
+import uce.gruapal.shared.model.UserImage;
+import uce.gruapal.shared.repository.UserImageRepository;
+import uce.gruapal.shared.repository.UserRepository;
 
 @RestController
 @RequestMapping("/admin")
 public class AdminController {
     @Autowired
     private UserRepository userRepository;
+    
     @Autowired
     private UserImageRepository userImageRepository;
 
@@ -60,7 +60,6 @@ public class AdminController {
             userImage.setUserId(userId);
             userImage.setImageBase64(imageBase64);
             userImageRepository.save(userImage);
-
             return ResponseEntity.ok("Image uploaded successfully");
         } catch (IOException e) {
             e.printStackTrace();

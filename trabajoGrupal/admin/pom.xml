@@ -32,11 +32,7 @@
 	</properties>
 	<dependencies>
 	
-		<dependency>
-			<groupId>uce.grupal</groupId>
-			<artifactId>shared</artifactId>
-			<version>1.0-SNAPSHOT</version>
-		</dependency>
+	
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -45,6 +41,11 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>uce.grupal</groupId>
+			<artifactId>shared</artifactId>
+			<version>1.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

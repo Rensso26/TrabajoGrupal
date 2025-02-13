@@ -20,6 +20,12 @@ spring:
           predicates:
             - Path=/history/**
 
+logging:
+  level:
+    root: info
+    org.springframework.cloud.gateway: trace
+    org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator: info
+
 eureka:
   client:
     service-url:
